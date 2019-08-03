@@ -26,9 +26,9 @@ test:
   database: db/test.sqlite3
 
 production:
-  primary:
-    adapter: postgresql
-    database: multi_db_production
   animals:
     adapter: postgresql
     database: animals_production
+  primary:
+    adapter: postgresql
+    database: multi_db_production
