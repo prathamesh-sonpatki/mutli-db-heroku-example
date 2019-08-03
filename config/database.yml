@@ -28,7 +28,7 @@ test:
 production:
   animals:
     adapter: postgresql
-    database: animals_production
+    url: <%= ENV["HEROKU_POSTGRESQL_YELLOW_URL"] %>
   primary:
     adapter: postgresql
-    database: multi_db_production
+    url: <%= ENV["DATABASE_URL"] %>
