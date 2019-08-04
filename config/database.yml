@@ -24,10 +24,10 @@ test:
   database: db/test.sqlite3
 
 production:
+  primary:
+    adapter: postgresql
+    url: <%= ENV["DATABASE_URL"] %>
   animals:
     migrations_paths: db/animal_migrate
     adapter: postgresql
     url: <%= ENV["HEROKU_POSTGRESQL_OLIVE_URL"] %>
-  primary:
-    adapter: postgresql
-    url: <%= ENV["DATABASE_URL"] %>
