@@ -3,15 +3,11 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
-animals_default: &animals_default
-  migrations_paths: db/animal_migrate
-
 development:
   primary:
     <<: *default
     database: db/development.sqlite3
   animals:
-    <<: *animals_default
     adapter: sqlite3
     database: db/animals_dev.sqlite3
     migrations_paths: db/animal_migrate
