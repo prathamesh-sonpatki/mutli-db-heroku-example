@@ -22,7 +22,6 @@ test:
 production:
   primary:
     adapter: postgresql
-    url: <%= ENV["DATABASE_URL"] %>
   animals:
     migrations_paths: db/animal_migrate
     adapter: postgresql
